@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Verify SMOTE Fix - Run Test",
+			"type": "shell",
+			"command": "python -c \"import json; nb = json.load(open('Classification_Model_Binary.ipynb')); print('✓ Notebook format valid'); [print(f'✓ Cell {i}: {c.get(\\\"cell_type\\\")}, Lines {c[\\\"metadata\\\"].get(\\\"id\\\",\\\"?\\\") if \\\"metadata\\\" in c else \\\"?\\\"}') for i, c in enumerate(nb['cells'][-3:])]\"",
+			"group": "test"
+		}
+	]
+}
